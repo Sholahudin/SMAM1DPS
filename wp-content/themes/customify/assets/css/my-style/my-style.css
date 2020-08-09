@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+.list-post {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .list-post li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 530px;
+    height: 145px;
+    min-height: 155px;
+    margin-left: 0 !important;
+    margin-bottom: 30px; }
+    .list-post li:nth-of-type(odd) {
+      margin-right: 50px; }
+  .list-post .wrap-image {
+    width: 145px;
+    margin-right: 25px; }
+    .list-post .wrap-image img {
+      width: 205px;
+      margin-right: 25px;
+      overflow: hidden; }
+  .list-post .wrap-content {
+    display: block;
+    position: relative; }
+  .list-post h2 {
+    font-family: "Lora", serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: auto;
+    color: #5D686B;
+    text-transform: bold; }
+  .list-post p {
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: auto;
+    color: #758285;
+    text-transform: initial; }
+  .list-post .date-post {
+    font-family: "Lora", serif;
+    font-weight: bold;
+    color: #1395BA; }
+
+.list-program {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .list-program li {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    margin: 10px 10px !important;
+    position: relative; }
+  .list-program figure {
+    position: relative;
+    transition: .3s all ease-in-out;
+    background: #1395BA; }
+    .list-program figure:hover img {
+      transition-delay: 0.10s;
+      opacity: 0.7;
+      transform: translate3d(0, 0, 0) scale(1.2); }
+    .list-program figure:hover figcaption::before {
+      opacity: 1;
+      transform: scale(1); }
+    .list-program figure:hover figcaption::after {
+      opacity: 1;
+      transform: scale(1);
+      transition-delay: 0.15s; }
+    .list-program figure:hover h2 {
+      transition-delay: 0.20s;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.35s, transform 0.35s; }
+    .list-program figure img {
+      max-width: initial;
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      transition: opacity 0.35s, transform 0.35s; }
+    .list-program figure figcaption {
+      padding: 3em 1.1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center; }
+      .list-program figure figcaption::before, .list-program figure figcaption::after {
+        content: '';
+        position: absolute;
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 0.35s, transform 0.35s; }
+      .list-program figure figcaption::before {
+        top: 50px;
+        right: 30px;
+        bottom: 50px;
+        left: 30px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: scale(0, 1);
+        transform-origin: 0 0; }
+      .list-program figure figcaption::after {
+        top: 30px;
+        right: 50px;
+        bottom: 30px;
+        left: 50px;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transform: scale(1, 0);
+        transform-origin: 100% 0; }
+    .list-program figure h2 {
+      font-family: "Lora", serif;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: auto;
+      color: #fff;
+      text-transform: initial;
+      letter-spacing: 3.5px;
+      padding: 0.5em 2em;
+      text-transform: none;
+      opacity: 0;
+      transform: translate3d(0, -10px, 0);
+      transition: opacity 0.35s, transform 0.35s; }
+
+.wpcf7-form.init input, .wpcf7-form.init textarea {
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: auto;
+  color: #758285;
+  text-transform: initial;
+  padding: 20px 15px;
+  border-radius: 5px;
+  box-shadow: none; }
+.wpcf7-form.init input[type=submit] {
+  background: #1395BA !important;
+  border-radius: 5px !important;
+  font-size: 13px !important;
+  padding: 5px 26px !important; }
+
+/*# sourceMappingURL=my-style.css.map */

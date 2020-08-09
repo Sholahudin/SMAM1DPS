@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+$lora: 'Lora', serif;
+$merriweather: 'Merriweather', serif;
+
+$blue: #1395BA;
+$dark_gray: #5D686B;
+$light_gray: #758285;
+
+@mixin for-size($range) {
+    $phone-upper-boundary: 600px;
+    $tablet-portrait-upper-boundary: 900px;
+    $tablet-landscape-upper-boundary: 1200px;
+    $desktop-upper-boundary: 1800px;
+
+    @if $range==phone-only {
+        @media (max-width: #{$phone-upper-boundary - 1}) {
+            @content;
+        }
+    }
+
+    @else if $range==tablet-portrait-up {
+        @media (min-width: $phone-upper-boundary) {
+            @content;
+        }
+    }
+
+    @else if $range==tablet-landscape-up {
+        @media (min-width: $tablet-portrait-upper-boundary) {
+            @content;
+        }
+    }
+
+    @else if $range==desktop-up {
+        @media (min-width: $tablet-landscape-upper-boundary) {
+            @content;
+        }
+    }
+
+    @else if $range==big-desktop-up {
+        @media (min-width: $desktop-upper-boundary) {
+            @content;
+        }
+    }
+}
+
+@mixin text_general($-font_family: $merriweather, $-font_weight: normal, $-font_size: 12px, $-line_height: auto, $-color: $dark_gray, $-text_transform: initial) {
+    font-family: $-font_family;
+    font-weight: $-font_weight;
+    font-size: $-font_size;
+    line-height: $-line_height;
+    color: $-color;
+    text-transform: $-text_transform;
+}

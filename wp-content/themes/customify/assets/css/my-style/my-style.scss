@@ -1,0 +1,163 @@
+@import './flexbox.scss';
+@import './mixins.scss';
+
+
+.list-post{
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+        @include flexbox();
+        @include align-items(center);
+        // @include flex-direction(column);
+        width: 530px;
+        height: 145px;
+        min-height: 155px;
+        margin-left: 0 !important;
+        margin-bottom: 30px;
+        &:nth-of-type(odd){
+            margin-right: 50px;
+        }
+    }
+    .wrap-image{
+        width: 145px;
+        margin-right: 25px;
+        img{
+            width: 205px;
+            margin-right: 25px;
+            overflow: hidden;
+        }
+    }
+    .wrap-content{
+        display: block;
+        position: relative;
+    }
+
+    h2{
+        @include text_general($-font_weight: normal, $-font-family: $lora, $-color: $dark_gray, $-text_transform: bold, $-font-size: 24px);
+    }
+    p{
+        @include text_general($-font_weight: normal, $-color: $light_gray);
+    }
+    .date-post{
+        font-family: $lora;
+        font-weight: bold;
+        color: $blue;
+    }
+}
+
+.list-program{
+    @include flexbox();
+    @include flex-wrap(wrap);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li{
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        margin: 10px 10px !important;
+        position: relative;
+    }
+    figure{
+        position: relative;
+        transition: .3s all ease-in-out;
+        background: #1395BA;
+        &:hover{
+            img{
+                transition-delay: 0.10s;
+                opacity: 0.7;
+                transform: translate3d(0,0,0) scale(1.2);
+            }
+            figcaption{
+                &::before{
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                &::after{
+                    opacity: 1;
+                    transform: scale(1);
+                    transition-delay: 0.15s;
+                }
+            }
+            h2{
+                transition-delay: 0.20s;
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                transition: opacity 0.35s, transform 0.35s;
+            }
+        }
+        img{
+            max-width: initial;
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+        figcaption{
+            padding: 3em 1.1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            &::before, &::after{
+                content: '';
+                position: absolute;
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity 0.35s, transform 0.35s;
+            }
+            &::before{
+                top: 50px;
+                right: 30px;
+                bottom: 50px;
+                left: 30px;
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                transform: scale(0,1);
+                transform-origin: 0 0;
+            }
+            &::after{
+                top: 30px;
+                right: 50px;
+                bottom: 30px;
+                left: 50px;
+                border-right: 1px solid #fff;
+                border-left: 1px solid #fff;
+                transform: scale(1,0);
+                transform-origin: 100% 0;
+            }
+        }
+        h2{
+            @include text_general($-color: #fff, $-font_size: 25px, $-font-family: $lora);
+            letter-spacing: 3.5px;
+            padding: 0.5em 2em;
+            text-transform: none;
+            opacity: 0;
+            transform: translate3d(0,-10px,0);
+            transition: opacity 0.35s, transform 0.35s;
+        }
+    }
+}
+
+.wpcf7-form.init{
+    input, textarea{
+        @include text_general($-color: #758285, $-font-family: $merriweather, $-font-size: 14px);
+        padding: 20px 15px;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+    input[type=submit]{
+        background: #1395BA !important;
+        border-radius: 5px !important;
+        font-size: 13px !important;
+        padding: 5px 26px !important;
+    }
+}

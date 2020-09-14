@@ -23,25 +23,50 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    width: 530px;
-    height: 145px;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
     min-height: 155px;
     margin-left: 0 !important;
     margin-bottom: 30px; }
-    .list-post li:nth-of-type(odd) {
-      margin-right: 50px; }
+    @media (min-width: 600px) {
+      .list-post li:nth-of-type(odd) {
+        margin-right: 50px; } }
+    @media (min-width: 600px) {
+      .list-post li {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        width: 530px;
+        height: 145px; } }
   .list-post .wrap-image {
-    width: 145px;
-    margin-right: 25px; }
+    width: 100%; }
+    @media (min-width: 600px) {
+      .list-post .wrap-image {
+        width: 145px;
+        margin-right: 25px; } }
     .list-post .wrap-image img {
-      width: 205px;
-      margin-right: 25px;
+      width: 100%;
       overflow: hidden; }
+      @media (min-width: 600px) {
+        .list-post .wrap-image img {
+          width: 205px;
+          margin-right: 25px; } }
   .list-post .wrap-content {
     display: block;
     position: relative; }
@@ -167,6 +192,102 @@
       opacity: 0;
       transform: translate3d(0, -10px, 0);
       transition: opacity 0.35s, transform 0.35s; }
+
+.list-pegawai {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style-type: none; }
+  .list-pegawai > li {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 373px;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1px #E2E9ED;
+    transition: 0.2s all;
+    position: relative;
+    z-index: 0;
+    background: #FFF; }
+    .list-pegawai > li:hover {
+      z-index: 1;
+      box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05); }
+  .list-pegawai figure.wrap-image {
+    margin-right: 15px !important; }
+  .list-pegawai figcaption {
+    padding-top: 5px; }
+  .list-pegawai .primary-text h2 {
+    margin-bottom: 0; }
+  .list-pegawai .secondary-text {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+    .list-pegawai .secondary-text ul {
+      list-style-type: none;
+      margin: 0;
+      margin-right: 10px; }
+      .list-pegawai .secondary-text ul:last-of-type {
+        margin-right: 0; }
+      .list-pegawai .secondary-text ul li {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        margin-bottom: 5px; }
+    .list-pegawai .secondary-text i {
+      margin-right: 7px; }
+    .list-pegawai .secondary-text p, .list-pegawai .secondary-text span {
+      margin: 0;
+      text-align: left; }
+  .list-pegawai .bubble {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 5px; }
+  .list-pegawai img {
+    width: 100%; }
+  .list-pegawai h2 {
+    font-family: "Lora", serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+    color: #000000;
+    text-transform: initial;
+    margin: 0; }
+  .list-pegawai p, .list-pegawai span {
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 19px;
+    color: #758285;
+    text-transform: initial; }
 
 .wpcf7-form.init input, .wpcf7-form.init textarea {
   font-family: "Merriweather", serif;
